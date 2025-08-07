@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intan Birthday</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Fixed gradient syntax */
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #e91e63;
+    }
+
+    h1 { 
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px #ff6f91;
+    }
+
+    .gif {
+      font-size: 4em;
+      margin-bottom: 1em; /* Fixed typo from 'margim' to 'margin' */
+      animation: wiggle 1s infinite; /* Fixed typo from 'animatiom' to 'animation' */
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); } /* Fixed typo from 'tranform' to 'transform' */
+      100% { transform: rotate(-3deg); }
+    }
+    
+    #message-box {
+      background-color: rgba(255, 255, 255, 0.8); /* Fixed typo from 'backgorund-color' to 'background-color' */
+      border-radius: 20px;
+      padding: 20px;
+      display: inline-block;
+      max-width: 600px;
+      font-size: 1.3em;
+      color: #e91e63; /* Set text color for better visibility */
+      white-space: pre-wrap; /* Preserve whitespace */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #e91e63;
+      animation: blink 0.8s infinite;
+      margin-left: 3px;
+      height: 1em;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="gif">🎊🎊🎊🎊🎊</div>
+  <h1>Hii Tann!!</h1>
+  <div id="message-box">
+    <span id="text"></span><span class="cursor"></span>
+  </div>
+
+  <script>
+    const message = `
+Today is your birthday, right?
+
+Happy Birthday.
+Aku cuma mau bilang...
+
+Sweet Seventeen!💫🎊Semoga tahun ini jadi tahun yang lebih baik daripada tahun sebelumnya.
+Semoga di setiap harimu jadi bait-bait cerita yang penuh warna indah, ringan, dan bermakna.
+Kau mulai menulis tangisan dan tawa dalam satu bait hidup yang sama.
+Semoga guratan perjuanganmu menjadi kanvas keindahan yang abadi.
+Usiamu kini di persimpangan waktu antara masa lalu dan harapan.
+Semoga kau berani menjaga luka untuk belajar, bukan untuk menyerah.
+pian dan harapanmu.
+
+Sehat Selalu.
+`;
+
+    let i = 0;
+    function typeText() {
+      if (i < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeText, 30); // kecepatan ketik lebih cepat
+      }
+    }
+
+    window.onload = typeText;
+  </script>
+</body>
+</html>
+```
